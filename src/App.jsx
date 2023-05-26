@@ -1,17 +1,19 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
-
+import Home from './pages/Home';
+import About from './pages/About';
+import Navbar from './components/Navbar';
 
 const App = () => {
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <h1>test</h1>,
+      element: <Home/>,
       errorElement: <h1>Error</h1>
     },
     {
       path: '/about',
-      element: <h1>about</h1>,
+      element: <About/>,
     },
     {
       path: '/contacts',
@@ -21,6 +23,7 @@ const App = () => {
 
   return (
     <>
+      <Navbar/>
       <RouterProvider router={router} />
     </>
   )
